@@ -44,7 +44,6 @@ public class CampaignStatService {
     Map<Long, SPCampaignStatistic> campaignAnalyticMap = new HashMap<>();
     for (SPCampaignReport report : reports) {
       Long campaignId = report.getCampaignId();
-
       campaignAnalyticMap.merge(campaignId, new SPCampaignStatistic(report), SPCampaignStatistic::add);
     }
 
